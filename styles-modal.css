@@ -1,68 +1,78 @@
+/* Reseta as margens e preenchimentos padrão do body e define a fonte */
 body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilos do header */
 header {
-    background-color: #fc0;
-    min-height: 160px;
+    background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+    min-height: 160px; /* Altura mínima do header */
     padding: 20px;
-    display: flex;
-    align-items: center;
-    top: 0;
+    display: flex; /* Flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    top: 0; /* Posicionamento no topo */
 }
 
+/* Estilos de título (h1 e h2) */
 h1, h2 {
     margin: 0px;
     padding: 5px;
 }
 
+/* Sombra no texto de h1 */
 h1 {
     text-shadow: 2px 2px lightgrey;
 }
 
+/* Estilos dos links de navegação */
 nav a {
-    flex: 1;
+    flex: 1; /* Cada link ocupa o mesmo espaço */
     padding: 10px;
     text-align: center;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(0, 0, 0); /* Cor de fundo preta */
 }
 
+/* Estilo das células da tabela (td) */
 td {
     padding-left: 5px;
 }
 
+/* Grupo de entrada (input) */
 .input-group {
     position: relative;
     margin: 20px 0;
 }
 
+/* Estilo do rótulo dentro do input-group */
 .input-group label {
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
     font-size: 16px;
-    color: darkblue;
+    color: rgb(0, 0, 0);
     padding: 0 5px;
     pointer-events: none;
-    transition: .5s;
+    transition: .5s; /* Animação para transição de posição */
 }
 
+/* Estilo do campo de entrada (input) */
 .input-group input {
     width: 360px;
     height: 60px;
     font-size: 16px;
-    color: darkblue;
+    color: rgb(0, 0, 0);
     padding: 0 15px;
     background: transparent;
-    border: 1.2px solid #0ef;
+    border: 1.2px solid rgb(255, 255, 255); /* Cor da borda do campo de entrada */
     outline: none;
     border-radius: 5px;
 }
 
+/* Animação de rótulo quando o campo de entrada está em foco ou válido */
 .input-group input:focus~label,
 .input-group input:valid~label {
     top: 0;
@@ -70,6 +80,7 @@ td {
     background: lightblue;
 }
 
+/* Estilo do número centralizado */
 .numero {
     text-align: center;
     align-items: center;
@@ -78,33 +89,39 @@ td {
     outline: 0;
     background: transparent;
     font-size: 28px;
-    color: darkblue;
+    color: rgb(37, 168, 44);
     font-weight: bold;
 }
 
+/* Estilos para o conteúdo e scroll-container */
 #conteudo, .scroll-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Alinha os itens na horizontal */
     gap: 3px;
     padding: 5px;
     min-height: 200px;
+    overflow-x: auto; /* Permite rolagem horizontal */
 }
 
+/* Estilo da sessão dentro do conteúdo */
 #conteudo .sessao {
     flex: 1;
     background-color: #d1d1d1;
     padding: 5px;
 }
 
+/* Estilos para o container de rolagem */
 .scroll-container {
-    overflow: auto;
-    white-space: nowrap;
+    overflow-y: auto; /* Permite rolagem vertical */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    white-space: nowrap; /* Impede quebra de linha */
     padding: 10px;
 }
 
+/* Estilo do botão */
 .botao {
-    background-color: orangered;
-    color: white;
+    background-color: rgb(255, 255, 255); /* Cor de fundo amarela */
+    color: rgb(0, 0, 0);
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -117,41 +134,82 @@ td {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efeito ao passar o mouse sobre o botão */
 .botao:hover {
-    background-color: red; /* Cor mais escura ao passar o mouse */
-    color: white;
+    background-color: rgb(255, 251, 0); /* Cor mais escura ao passar o mouse */
+    color: rgb(255, 4, 4);
 }
 
+/* Efeito ao clicar no botão */
 .botao:active {
     transform: scale(0.95); /* Efeito de pressionar */
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Estilos para os botões de "mais" e "menos" */
+.botao-mais, .botao-menos {
+    background-color: rgb(255, 255, 255); /* Cor de fundo branca */
+    color: rgb(0, 0, 0); /* Cor do texto preta */
+    padding: 0; /* Remove qualquer preenchimento extra */
+    font-size: 30px; /* Aumenta o tamanho do símbolo */
+    border-radius: 50%; /* Faz o botão ser redondo */
+    border: none; /* Remove qualquer borda */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-flex; /* Alinha o conteúdo no centro */
+    justify-content: center; /* Alinha o texto horizontalmente */
+    align-items: center; /* Alinha o texto verticalmente */
+    width: 50px; /* Tamanho fixo do botão */
+    height: 50px; /* Tamanho fixo do botão */
 }
 
-/* Modal Content/Box */
+/* Efeito ao passar o mouse sobre o botão de "mais" e "menos" */
+.botao-mais:hover, .botao-menos:hover {
+    background-color: rgb(255, 251, 0); /* Cor mais escura */
+    color: rgb(255, 4, 4);
+}
+
+/* Efeito ao clicar no botão de "mais" e "menos" */
+.botao-mais:active, .botao-menos:active {
+    transform: scale(0.95); /* Efeito de pressionar */
+}
+
+/* Estilo para o botão de "mais" */
+.botao-mais {
+    font-weight: bold;
+}
+
+/* Estilo para o botão de "menos" */
+.botao-menos {
+    font-weight: normal;
+}
+
+
+/* O fundo do modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixa a posição */
+    z-index: 1; /* Aparece acima de outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    background-color: rgba(0,0,0,0.4); /* Fundo semitransparente */
+}
+
+/* Estilo do conteúdo do modal */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #fefefe; /* Cor de fundo branca */
+    margin: 15% auto; /* Centraliza o modal na tela */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Largura do modal */
     border: 4px solid red;
     border-radius: 5px;
     border-style: outset;
     font-weight: bold;
 }
 
-/* The Close Button */
+/* Estilo do botão de fechar no modal */
 .close {
     color: #aaa;
     float: right;
@@ -159,6 +217,7 @@ td {
     font-weight: bold;
 }
 
+/* Efeito ao passar o mouse sobre o botão de fechar */
 .close:hover,
 .close:focus {
     color: black;
@@ -166,17 +225,26 @@ td {
     cursor: pointer;
 }
 
+/* Estilos para a navegação em telas grandes */
 @media screen {
     nav {
         display: flex;
         flex-direction: row;
         gap: 5px;
     }
+
+    /* Mantém a rolagem horizontal no computador */
+    #conteudo, .scroll-container {
+        overflow-x: auto; /* Permite rolagem horizontal */
+        overflow-y: hidden; /* Impede rolagem vertical */
+    }
 }
 
+/* Estilos para telas menores (máximo de 500px de largura) */
 @media (max-width: 500px) {
     body, html {
         overflow-x: hidden; /* Impede a rolagem horizontal */
+        overflow-y: auto;  /* Permite rolagem vertical */
     }
 
     /* Quebra de linha no texto */
@@ -198,9 +266,12 @@ td {
         display: block;
     }
 
+    /* Organiza o conteúdo e o container de rolagem em colunas */
     #conteudo, .scroll-container {
         display: flex;
         flex-direction: column;
+        overflow-y: auto; /* Força rolagem vertical */
+        overflow-x: hidden; /* Impede rolagem horizontal */
     }
 
     footer {

@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-        <img src="logotecspetos.jpg" width="190" height="190">
-        <h1>Peça o seu Delicioso TecSpeto</h1>
+        <img src="logotecspetos.png" width="190" height="190">
+        <h1>Peça já seu Delicioso <br> TecSpeto</h1>
     </header>
     <form>
     <nav>
@@ -22,7 +22,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img1.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="carne.avif" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                     <font size="4">
@@ -32,8 +32,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(0)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(0)">
+                      <button class="somar" onclick="funcsomar(0, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(0, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -45,7 +45,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img2.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="coraçao.avif" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                    <span><h2>Coração (R$ 7,00)</h2></span>
@@ -53,8 +53,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(1)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(1)">
+                      <button class="somar" onclick="funcsomar(1, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(1, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -66,7 +66,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img3.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="pao.avif" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                    <span><h2>Pão de Alho (R$ 5,00)</h2></span>
@@ -74,8 +74,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(2)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(2)">
+                      <button class="somar" onclick="funcsomar(2, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(2, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -88,7 +88,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img1.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="medalhao.webp" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                    <span><h2>Medalhão (R$ 8,50)</h2></span>
@@ -96,8 +96,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(3)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(3)">
+                      <button class="somar" onclick="funcsomar(3, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(3, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -109,7 +109,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img2.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="kaftaqueijo.webp" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                    <span><h2>Kafta/Queijo (R$ 8,50)</h2></span>
@@ -117,8 +117,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(4)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(4)">
+                      <button class="somar" onclick="funcsomar(4, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(4, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -130,7 +130,7 @@
             <table>
                 <tr>
                   <td rowspan="2">
-                    <img src="img3.jpg" alt="texto explicativo" width="180" height="140">
+                    <img src="tulipa.jpg" alt="texto explicativo" width="180" height="140">
                   </td> 
                   <td colspan="2">
                    <span><h2>Tulipa (R$ 7,00)</h2></span>
@@ -138,8 +138,8 @@
                  </tr>
                  <tr>
                   <td> 
-                      <img src="botaomais.png" class="somar" width="30" height="30" onclick="funcsomar(5)">&nbsp;&nbsp;
-                      <img src="botaomenoss.png" class="subtrair" width="30" height="30" onclick="funcsubtrair(5)">
+                      <button class="somar" onclick="funcsomar(5, event)">+</button>&nbsp;&nbsp;
+                      <button class="subtrair" onclick="funcsubtrair(5, event)">-</button>
                   </td>
                   <td class="qtd">
                     <input class="numero" type="text" size="2" maxlength="2" readonly value="0">
@@ -168,10 +168,9 @@
 </div>
 
 <script>
-
 var botaoFinalizar = document.querySelector("#finalizar-pedido");
 botaoFinalizar.addEventListener("click", function(event) {
-    event.preventDefault();
+    event.preventDefault();  // Impede o recarregamento da página
     var pedidos = document.querySelectorAll(".numero");
     var total = 0;
     
@@ -180,84 +179,36 @@ botaoFinalizar.addEventListener("click", function(event) {
     
     // Loop para calcular o total com base nas quantidades e preços
     for (var i = 0; i < pedidos.length; i++) {
-        var quantidade = Number(pedidos[i].value); // quantidade do item
-        total += quantidade * precos[i]; // adiciona o valor calculado ao total
+        var quantidade = Number(pedidos[i].value);
+        total += quantidade * precos[i];
     }
     
-    document.getElementById("totalmodal").innerHTML = "Total = R$ " + total.toFixed(2);
+    // Exibir o total no modal
+    document.getElementById("totalmodal").innerText = "Total: R$ " + total.toFixed(2);
+    document.getElementById("myModal").style.display = "block";
 });
 
+var span = document.querySelector(".close");
+span.addEventListener("click", function() {
+    document.getElementById("myModal").style.display = "none";
+});
 
-  var botaoRedefinir = document.querySelector("#redefinir");
-  botaoRedefinir.addEventListener("click", function(event) {
-      document.getElementById("valorfinal").innerHTML = "";
-  });
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("finalizar-pedido");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-modal.style.display = "block";
+function funcsomar(index, event) {
+    event.preventDefault();  // Impede o recarregamento da página
+    var input = document.querySelectorAll(".numero")[index];
+    var valor = Number(input.value);
+    input.value = valor + 1;
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-modal.style.display = "none";
+function funcsubtrair(index, event) {
+    event.preventDefault();  // Impede o recarregamento da página
+    var input = document.querySelectorAll(".numero")[index];
+    var valor = Number(input.value);
+    if (valor > 0) {
+        input.value = valor - 1;
+    }
 }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
-}
-} 
-
-function funcsomar(pos){
-var calcsoma = document.querySelectorAll(".numero");
-maisum=Number(calcsoma[pos].value);
-maisum += 1;
-calcsoma[pos].value=maisum;
-};
-
-function funcsubtrair(pos){
-var calcsoma = document.querySelectorAll(".numero");
-maisum=Number(calcsoma[pos].value);
-maisum -= 1;
-if (maisum <0){maisum=0;}
-calcsoma[pos].value=maisum;
-};
-
-function chamar(){
-var vnome = document.getElementById("nome").value;
-var vfone = document.getElementById("fone").value;
-var pagina = "mostrar.html?nome="+vnome+"&fone="+vfone;
-var mandanumeros = document.querySelectorAll(".numero");
-for (var i = 0; i < mandanumeros.length; i++) {
-          var envianumero=Number(mandanumeros[i].value);
-          var vitem="item"+i;
-          pagina += ("&"+vitem+"="+envianumero);
-          if (i==0){localStorage.setItem("item0", envianumero);}
-          if (i==1){localStorage.setItem("item1", envianumero);}
-          if (i==2){localStorage.setItem("item2", envianumero);}
-          if (i==3){localStorage.setItem("item3", envianumero);}
-          if (i==4){localStorage.setItem("item4", envianumero);}
-          if (i==5){localStorage.setItem("item5", envianumero);}
-};
-document.getElementById("nome").value="";
-document.getElementById("fone").value="";
-localStorage.setItem('chamapagina', pagina);
-localStorage.setItem('nome', vnome);
-localStorage.setItem('fone', vfone);
-//    window.location.href = pagina;
-};
-
 </script>
+
 </body>
 </html>
