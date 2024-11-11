@@ -169,22 +169,24 @@
 
 <script>
 
-  var botaoFinalizar = document.querySelector("#finalizar-pedido");
-  botaoFinalizar.addEventListener("click", function(event) {
-      event.preventDefault();
-      var pedidos = document.querySelectorAll(".numero");
-      var total = 0;
-      for (var i = 0; i < pedidos.length; i++) {
-          var multiplica = 0;
-          if (i==0){var multiplica=7;}
-          if (i==1){var multiplica=7;}
-          if (i==2){var multiplica=5;}
-          if (i==3){var multiplica=8.5;}
-          var tdValor = Number(pedidos[i].value);
-          total = total + (tdValor * multiplica);
-      }
-      document.getElementById("totalmodal").innerHTML = "Total = R$ " + total.toFixed(2);
-  });
+var botaoFinalizar = document.querySelector("#finalizar-pedido");
+botaoFinalizar.addEventListener("click", function(event) {
+    event.preventDefault();
+    var pedidos = document.querySelectorAll(".numero");
+    var total = 0;
+    
+    // Defina os preços para cada item em uma lista
+    var precos = [7.00, 7.00, 5.00, 8.50, 8.50, 7.00];
+    
+    // Loop para calcular o total com base nas quantidades e preços
+    for (var i = 0; i < pedidos.length; i++) {
+        var quantidade = Number(pedidos[i].value); // quantidade do item
+        total += quantidade * precos[i]; // adiciona o valor calculado ao total
+    }
+    
+    document.getElementById("totalmodal").innerHTML = "Total = R$ " + total.toFixed(2);
+});
+
 
   var botaoRedefinir = document.querySelector("#redefinir");
   botaoRedefinir.addEventListener("click", function(event) {
